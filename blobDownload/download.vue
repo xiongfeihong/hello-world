@@ -13,6 +13,18 @@ export default {
     return {}
   },
   methods: {
+    getParams() {
+      console.log('this.taskRegion-----', this.taskRegion);
+      return {
+        statisticsCycle: this.cycle,
+        statisticsTime: this.dmsTime.replace(/\-/g, ''),
+        gridCode: this.taskRegion.code || this.currentRegionCode,
+        level: this.value,
+        // content: this.value || null,
+        pageSize: this.pagination.pageSize,
+        pageIndex: this.pagination.currentPage
+      }
+    },
     exportData() {
       let parm = this.getParams();
       statisBoard.exportPersonTotList(parm).then(res => {
