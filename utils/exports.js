@@ -8,9 +8,14 @@ export function exportBlob(res) {
   const fileType = fileName.split(".");
   downloadBlob(blob, fileName);
 }
-/** Response Headers
+/** 
+* Response Headers 1
 * Content-Disposition: attachment;filename=general-Template.xlsx
 * Content-Type: application/octet-stream
+*
+* Response Headers 2
+* Content-Disposition: attachment;name=file;filename=grid_tot_20220412130835.csv
+* Content-Type: multipart/form-data
 *
 */
 
