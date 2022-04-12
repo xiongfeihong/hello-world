@@ -8,6 +8,11 @@ export function exportBlob(res) {
   const fileType = fileName.split(".");
   downloadBlob(blob, fileName);
 }
+/** Response Headers
+* Content-Disposition: attachment;filename=general-Template.xlsx
+* Content-Type: application/octet-stream
+*
+*/
 
 function downloadBlob(blob, fileName) {
   if ("download" in document.createElement("a")) {
