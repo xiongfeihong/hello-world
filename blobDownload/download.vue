@@ -6,7 +6,7 @@
 import {
   exportBlob
 } from '@/util/export.js'
-import statisBoard from "@/apis/statisBoard.js";
+import statisBoard from "@/apis/apis_export.js";
 
 export default {
   data() {
